@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1702500075600' stop='1702500079639'>
+    <name>Test con baseUrl personalizado y precondiciones</name>
+    <title>Test con baseUrl personalizado y precondiciones</title>
+    <test-cases>
+        <test-case start='1702500075600' status='passed' stop='1702500079639'>
+            <name>Check title name, url and img exist </name>
+            <title>Check title name, url and img exist </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

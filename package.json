@@ -1,0 +1,35 @@
+{
+  "name": "demoeco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run clean:reports",
+    "cypress:open": "cypress open --browser chrome --e2e",
+    "cypress:run": "cypress run --reporter mochawesome",
+    "cypress:open:allure": "cypress open --env allure=true",
+    "cypress:run:allure": "cypress run --env allure=true",
+    "ui-regression-allure": "cypress run --browser chrome --spec cypress/e2e/**.js --env allure=true",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true",
+    "allure:open": "allure open -h localhost -p 80 allure-report",
+    "test:allure": "npm run cypress:run:allure || npm run allure:report && npm run allure:open || true"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "automation",
+    "javascript",
+    "typescript"
+  ],
+  "author": "jonh",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "cypress": "^12.14.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1",
+    "mocha-allure-reporter": "^1.4.0"
+  }
+}

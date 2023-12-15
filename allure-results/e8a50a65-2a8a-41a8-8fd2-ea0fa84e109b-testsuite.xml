@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1702500089414' stop='1702500092676'>
+    <name>Descargar una imagen de demoqa.com/upload-download</name>
+    <title>Descargar una imagen de demoqa.com/upload-download</title>
+    <test-cases>
+        <test-case start='1702500089414' status='passed' stop='1702500092675'>
+            <name>Should be download file</name>
+            <title>Should be download file</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

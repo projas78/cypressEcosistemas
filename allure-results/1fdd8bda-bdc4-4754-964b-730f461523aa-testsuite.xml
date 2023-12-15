@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1702500061526' stop='1702500074009'>
+    <name>Test for checkbox and select options</name>
+    <title>Test for checkbox and select options</title>
+    <test-cases>
+        <test-case start='1702500061526' status='passed' stop='1702500066306'>
+            <name>1. Search text with not exist in the table</name>
+            <title>1. Search text with not exist in the table</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1702500066328' status='passed' stop='1702500071694'>
+            <name>2. Complete form</name>
+            <title>2. Complete form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1702500071725' status='passed' stop='1702500074009'>
+            <name>3. check with form is empty</name>
+            <title>3. check with form is empty</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
