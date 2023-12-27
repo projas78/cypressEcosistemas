@@ -26,15 +26,29 @@
 import 'cypress-file-upload';
 // import '@mmisty/cypress-allure-adapter/support';
 
-Cypress.Commands.add('login', ()  => {
+// Importar el comando de cy.session
+// import './session'
 
-    cy.session('my-session', () => {
-        cy.visit('https://demoqa.com/text-box');
-    }, 
+Cypress.Commands.add('login', (user = 'test', password= 'Test1234#', path = '')   => {
+
+    cy.session([user, password, path], () => {
+    cy.visit('https://demoqa.com/login');
+    // Aquí pones el código para llenar los campos de login con el user y el password que pasaste como argumentos
+    cy.get('#userName').type(user);
+    cy.get('#password').type(password);
+    cy.get('#login').click();
+    // Aquí pones la función de validación que comprueba que la URL actual contenga /profile
+    cy.url().should('include', '/profile')
+    // Aquí visitas la página que pasaste como argumento, si hay alguna
+    if (path) {
+    cy.visit(path)
+    }
+        }, 
     {
-        cacheAcrossSpecs: true
-    });
+    cacheAcrossSpecs: true
+        });
 });
+
 
 Cypress.Commands.add('completeForm', ({ userName, userEmail, currentAddress, permananetAddress }) => {
     cy.get('#userName').type(userName);
@@ -52,7 +66,7 @@ Cypress.Commands.add('completeForm', ({ userName, userEmail, currentAddress, per
   });
 
 Cypress.Commands.add('searchText', (searchText) => {
-    cy.get('#searchBox').type(searchText);
+    cy.get('#searchBox').type(searchText); 
 });
 
 Cypress.Commands.add('completeForminTable', (userData) => {
@@ -79,4 +93,8 @@ Cypress.Commands.add('uploadFile', (filePath) => {
 
 Cypress.Commands.add('interceptPostsRequest', () => {
     cy.intercept('GET', 'https://jsonplaceholder.typicode.com/posts').as('getPosts');
-  });
+});
+
+Cypress.Commands.add('logOut',() => {
+    cy.get('#submit').should('contain.text', 'Log out').click();
+});

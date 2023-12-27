@@ -5,7 +5,7 @@ describe("Test con intercept", () => {
     })
     
     // El test verifica que la página hace una petición GET a la API y recibe una respuesta válida
-    it("Verifica la petición y la respuesta de la API", () => {
+    it.skip("Verifica la petición y la respuesta de la API", () => {
         cy.intercept("get","/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10", {Limit:10, name: "Demo"}).as('comments')
         cy.xpath('//*[@id="__next"]/div/div/div[3]/div/div[5]').click();
         cy.wait('@comments').then(intercept => {

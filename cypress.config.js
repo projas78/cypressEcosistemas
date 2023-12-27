@@ -7,7 +7,7 @@ e2e: {
 // Añadir la opción specPattern con el valor "cypress/api/**/*.cy.{js,jsx,ts,tsx}"
 specPattern: "cypress/{e2e,api}/**/*.cy.{js,jsx,ts,tsx}",
 experimentalRunAllSpecs: true,
-baseUrl: "https://demoqa.com/text-box",
+baseUrl: "https://demoqa.com/",
 setupNodeEvents(on, config) {
 allureWriter(on, config);
 return config;

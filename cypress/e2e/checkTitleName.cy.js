@@ -5,7 +5,7 @@ describe('Test con baseUrl personalizado y precondiciones', () => {
             return false;
         });
         cy.login();
-        cy.visit('/')
+        cy.visit('/text-box/')
         
     });
 

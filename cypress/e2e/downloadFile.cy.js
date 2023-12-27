@@ -5,7 +5,7 @@ describe('Descargar una imagen de demoqa.com/upload-download', () => {
     return false;
     });
     cy.login();
-    cy.visit('https://demoqa.com/upload-download');
+    cy.visit('/upload-download');
     
     });
     

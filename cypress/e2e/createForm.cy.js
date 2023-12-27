@@ -12,7 +12,7 @@ describe('Check form field', () => {
             return false;
         });
         cy.login();
-        cy.visit('/')
+        cy.visit('/text-box')
         
     });
 

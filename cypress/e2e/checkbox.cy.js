@@ -7,7 +7,7 @@ describe('Test for checkbox and select options', () => {
             return false;
         });
         cy.login();
-        cy.visit('https://demoqa.com/checkbox')
+        cy.visit('/checkbox')
         
     });
 

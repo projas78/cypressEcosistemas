@@ -15,7 +15,7 @@ describe('Test for checkbox and select options', () => {
             return false;
         });
         cy.login();
-        cy.visit('https://demoqa.com/webtables')
+        cy.visit('/webtables')
         
     });
 
