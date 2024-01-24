@@ -10,6 +10,7 @@ describe('Test con baseUrl personalizado y precondiciones', () => {
     });
 
     it('Check title name, url and img exist ', () => {
+        cy.get('#userName-label').should('have.text', 'User Name')
         
         //Validar el nombre de la pagina
         cy.get('.main-header').should('have.text', 'Text Box');

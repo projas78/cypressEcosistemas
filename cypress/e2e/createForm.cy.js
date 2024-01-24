@@ -18,7 +18,7 @@ describe('Check form field', () => {
 
     it('1. Validate form names', () => {
         
-        cy.get('#userName-label').should('have.text', 'Full Name');
+        cy.get('#userName-label').should('have.text', 'Full NameSSS');
         cy.get('#userEmail-label').should('have.text', 'Email');
         cy.get('#currentAddress-label').should('contain.text', 'Current A');
         cy.get('#permanentAddress-label').should('have.text', 'Permanent Address');
